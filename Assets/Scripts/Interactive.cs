@@ -41,17 +41,20 @@ public class Interactive : MonoBehaviour
 
     void Awake()
     {
-        _interactionManager = InteractionManager.instance;
-        _playerInventory    = _interactionManager.playerInventory;
-        _requirements       = new List<Interactive>();
-        _dependents         = new List<Interactive>();
-        _animator           = GetComponent<Animator>();
-        _requirementsMet    = _interactiveData.requirements.Length == 0;
-        _interactionCount   = 0;
+        if (_interactionManager == null)
+        {
+            _interactionManager = InteractionManager.instance;
+            _playerInventory    = _interactionManager.playerInventory;
+            _requirements       = new List<Interactive>();
+            _dependents         = new List<Interactive>();
+            _animator           = GetComponent<Animator>();
+            _requirementsMet    = _interactiveData.requirements.Length == 0;
+            _interactionCount   = 0;
 
-        isOn = _interactiveData.startsOn;
+            isOn = _interactiveData.startsOn;
 
-        _interactionManager.RegisterInteractive(this);
+            _interactionManager.RegisterInteractive(this);
+        }
     }
 
     public void AddRequirement(Interactive requirement)
@@ -102,7 +105,7 @@ public class Interactive : MonoBehaviour
     {
         if (direct && IsType(InteractiveData.Type.Indirect))
             return;
-        else if (IsType(InteractiveData.Type.Pickable))
+        else if (IsType(InteractiveData.Type.Pickable) && !_playerInventory.IsFull())
         {
             _playerInventory.Add(this);
             gameObject.SetActive(false); 
