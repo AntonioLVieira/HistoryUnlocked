@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4e9dbdf0818e9941bfaac30f13cee2b, type: 3}
-  m_Name: Door1
+  m_Name: ChessPosition4
   m_EditorClassIdentifier: 
-  type: 2
+  type: 3
   startsOn: 1
   inventoryName: 
   inventoryIcon: {fileID: 0}
   requirements:
-  - {fileID: 11400000, guid: 45bc5692d484cd14aba14e4221164d04, type: 2}
-  requirementsMessage: The door is locked
+  - {fileID: 11400000, guid: b6e07951f226458479b1ae0726024ec5, type: 2}
+  - {fileID: 11400000, guid: ffe082b53fc8c1544a61c3f520b4f096, type: 2}
+  - {fileID: 11400000, guid: 323e52c158ba0c248b83b42ff106af23, type: 2}
+  - {fileID: 11400000, guid: f4a90b518e22f3b43b0a4f16dc24355b, type: 2}
+  requirementsMessage: Put it in the right order
   interactionMessages:
-  - Open
+  - 
