@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   startsOn: 1
-  inventoryName: Object1
+  inventoryName: Object
   inventoryIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   requirements: []
   requirementsMessage: 

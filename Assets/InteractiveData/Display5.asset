@@ -18,6 +18,6 @@ MonoBehaviour:
   inventoryIcon: {fileID: 0}
   requirements:
   - {fileID: 11400000, guid: 8f254be62d40d794184c58b926af10ce, type: 2}
-  requirementsMessage: Put it in the right order
+  requirementsMessage: Pick Objct
   interactionMessages:
-  - 
+  - Pick Objct
